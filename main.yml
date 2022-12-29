@@ -1,5 +1,5 @@
 ---
-  - hosts: local
+  - hosts: vps
     become: true
     
     # vars_files:
@@ -21,4 +21,4 @@
     - name: Rebooting server
       reboot:
         msg: Server Rebooting - triggered by Ansible Playbook.
-      when: reboot_required.exists
+      when: reboot_required.stat.exists
