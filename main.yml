@@ -6,14 +6,12 @@
     # - vars/vars.yml
     
     tasks:
-    - name: Update APT cache, if needed
-      apt:
-        update_cache: true
-        cache_valid_time: 3600
-    - name: Upgrade & autoremove packages
-      apt:
-        upgrade: safe
-        autoremove: true
+    # - name: Update APT cache, and upgrade packages
+    #   apt:
+    #     update_cache: true
+    #     cache_valid_time: 3600
+    #     upgrade: safe
+    #     autoremove: true
     - name: Check if the server needs to restart
       stat:
         path: /var/run/reboot-required
