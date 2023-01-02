@@ -7,3 +7,5 @@ inventory is an .ini file formated as such:
 vps1 ansible_become_password=vps1pass
 vps2 ansible_become_password=vps2pass
 ```
+
+whers `vps1` is defined in an local ssh config
