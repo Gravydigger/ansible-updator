@@ -1,15 +1,13 @@
 ---
   - hosts: vps
     become: true
-    
-    # vars_files:
-    # - vars/vars.yml
-    
+
     tasks:
-    - name: Update APT cache, and upgrade packages
+    - name: Update APT cache
       apt:
         update_cache: true
         cache_valid_time: 3600
+    - name: Upgrade APT packages, and autoremove redundant dependencies
         upgrade: safe
         autoremove: true
     - name: Check if the server needs to restart
