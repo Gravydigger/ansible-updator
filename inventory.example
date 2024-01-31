@@ -1,0 +1,10 @@
+[vps]
+sshAddress1 ansible_become_password=root_pass1
+sshAddress2 ansible_become_password=root_pass2
+
+[test]
+192.168.60.4
+
+[test:vars]
+ansible_user=vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
